@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include pcfc *.css
+recursive-include pcfc *.csv
+recursive-include pcfc *.html
+recursive-include pcfc *.ico
+recursive-include pcfc *.js
+recursive-include pcfc *.json
+recursive-include pcfc *.md
+recursive-include pcfc *.png
+recursive-include pcfc *.py
+recursive-include pcfc *.svg
+recursive-include pcfc *.txt
+recursive-exclude pcfc *.pyc
