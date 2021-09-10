@@ -1,0 +1,167 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2021-06-28 14:10:39.982481",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "date",
+  "time",
+  "agent_name",
+  "business_unit",
+  "caller_name",
+  "caller_phone_number",
+  "email_address",
+  "column_break_8",
+  "contact_received_from",
+  "contact_type",
+  "email_sent",
+  "inquiry_and_feedback",
+  "amended_from",
+  "email_id"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "IAF-"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date"
+  },
+  {
+   "default": "Now",
+   "fieldname": "time",
+   "fieldtype": "Time",
+   "label": "Time"
+  },
+  {
+   "fieldname": "agent_name",
+   "fieldtype": "Link",
+   "label": "Agent Name ",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "business_unit",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Business Unit ",
+   "options": "DMCA\nTrakhees\nPCFC Security\nEHS\nPCFC Investment\nWooden Dhows",
+   "reqd": 1
+  },
+  {
+   "fieldname": "caller_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Caller Name ",
+   "reqd": 1
+  },
+  {
+   "description": "Should start with 971",
+   "fieldname": "caller_phone_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Caller Phone Number ",
+   "options": "Phone",
+   "reqd": 1
+  },
+  {
+   "fieldname": "email_address",
+   "fieldtype": "Data",
+   "label": "Email Address",
+   "options": "Email"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "contact_received_from",
+   "fieldtype": "Select",
+   "label": "Contact Received From  ",
+   "options": "Call\nEmail\nWeb Chat\nWhatsApp"
+  },
+  {
+   "fieldname": "contact_type",
+   "fieldtype": "Select",
+   "label": "Contact Type  ",
+   "options": "Inquiry\nFeedback"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Inquiry and Feedback",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "inquiry_and_feedback",
+   "fieldtype": "Small Text",
+   "label": "Inquiry and Feedback"
+  },
+  {
+   "default": "0",
+   "fieldname": "email_sent",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Email Sent"
+  },
+  {
+   "fieldname": "email_id",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Email Id",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2021-07-12 15:52:28.997756",
+ "modified_by": "Administrator",
+ "module": "Pcfc",
+ "name": "Inquiry and Feedback",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Administrator",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "caller_name",
+ "track_changes": 1
+}

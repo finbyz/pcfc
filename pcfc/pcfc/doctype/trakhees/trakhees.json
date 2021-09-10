@@ -1,0 +1,207 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2021-06-28 12:21:59.585839",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "date",
+  "time",
+  "agent_name",
+  "business_unit",
+  "contact_type",
+  "caller_name",
+  "caller_phone_number",
+  "email_address",
+  "column_break_8",
+  "service_type",
+  "sub_service_type",
+  "service_type_description",
+  "case_status",
+  "call_center_comments_box",
+  "email_to_be_sent",
+  "email_sent",
+  "trakees_comment_box",
+  "amended_from",
+  "email_id"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "TRA-"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date"
+  },
+  {
+   "default": "Now",
+   "fieldname": "time",
+   "fieldtype": "Time",
+   "label": "Time"
+  },
+  {
+   "fieldname": "agent_name",
+   "fieldtype": "Link",
+   "label": "Agent Name",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "contact_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Contact Type",
+   "options": "Call\nEmail\nOnline Chat\nWhatsApp Chat",
+   "reqd": 1
+  },
+  {
+   "fieldname": "caller_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Caller Name",
+   "reqd": 1
+  },
+  {
+   "description": "Should start with 971",
+   "fieldname": "caller_phone_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Caller Phone Number",
+   "options": "Phone",
+   "reqd": 1
+  },
+  {
+   "fieldname": "email_address",
+   "fieldtype": "Data",
+   "label": "Email Address",
+   "options": "Email"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "service_type",
+   "fieldtype": "Link",
+   "label": "Service Type",
+   "options": "Trakhees Service Type"
+  },
+  {
+   "depends_on": "eval:doc.service_type!=\"Others- Please Specify\"",
+   "fieldname": "sub_service_type",
+   "fieldtype": "Link",
+   "label": "Sub Service Type",
+   "options": "Trakhees Sub Service Type"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "case_status",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Case Status",
+   "options": "Open\nForwarded to Trakhees\nIn Progress\nResolved"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "call_center_comments_box",
+   "fieldtype": "Small Text",
+   "label": "Call Center Comments Box",
+   "reqd": 1
+  },
+  {
+   "fieldname": "email_to_be_sent",
+   "fieldtype": "Select",
+   "label": "Email To Be Sent",
+   "options": "Yes\nNo"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "trakees_comment_box",
+   "fieldtype": "Small Text",
+   "label": "Trakees Comment Box"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Trakhees",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.service_type==\"Others- Please Specify\"",
+   "fieldname": "service_type_description",
+   "fieldtype": "Small Text",
+   "label": "Service Type Description"
+  },
+  {
+   "fieldname": "business_unit",
+   "fieldtype": "Data",
+   "label": "Business Unit",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "email_sent",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Email Sent"
+  },
+  {
+   "fieldname": "email_id",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Email Id",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2021-07-12 12:33:11.569321",
+ "modified_by": "Administrator",
+ "module": "Pcfc",
+ "name": "Trakhees",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Administrator",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "caller_name",
+ "track_changes": 1
+}

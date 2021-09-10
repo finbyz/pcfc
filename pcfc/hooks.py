@@ -89,7 +89,18 @@ app_license = "GPL 3.0"
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
+doc_events = {
+	"Dubai Maritime City Authority":{
+		"validate":"pcfc.pcfc.doc_events.dubai_maritime_city_authority.validate"
+	},
+	"Trakhees":{
+		"validate":"pcfc.pcfc.doc_events.trakhees.validate"
+	},
+	# ('Dubai Maritime City Authority','Dubai Ports Authority','EHS','Inquiry and Feedback','Marine Agency','PCFC Investment','PCFC Security','Trakhees'):{
+	# 	"validate":"pcfc.api.validate"
+	# }
+	}
+
 # 	"*": {
 # 		"on_update": "method",
 # 		"on_cancel": "method",
@@ -173,3 +184,7 @@ user_data_fields = [
 # 	"pcfc.auth.validate"
 # ]
 
+# override for cc_field
+# from frappe.email.doctype.notification.notification import Notification
+# from pcfc.api import get_list_of_recipients
+# Notification.get_list_of_recipients = get_list_of_recipients
