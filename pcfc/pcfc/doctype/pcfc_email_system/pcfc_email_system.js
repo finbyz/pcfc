@@ -12,7 +12,15 @@ frappe.ui.form.on('PCFC Email System', {
 				},
 				callback(r) {
 					frm.set_value("subject",r.message.subject)
-					frm.set_value("agent_response_area",r.message.message)
+					frappe.db.get_value("User",frappe.session.user,'email_signature',function(d){
+						if(d.email_signature){
+							frm.set_value("agent_response_area",r.message.message + d.email_signature)
+						}
+						else{
+							frm.set_value("agent_response_area",r.message.message)
+						}
+					})
+					
 				},
 			});
 		}

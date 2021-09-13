@@ -4,6 +4,7 @@
  "creation": "2021-09-10 08:39:50.964238",
  "doctype": "DocType",
  "editable_grid": 1,
+ "email_append_to": 1,
  "engine": "InnoDB",
  "field_order": [
   "naming_series",
@@ -24,7 +25,14 @@
   "section_break_16",
   "email_template",
   "subject",
-  "agent_response_area"
+  "agent_response_area",
+  "send_email",
+  "section_break_20",
+  "status_history",
+  "section_break_22",
+  "call_center_team_duration",
+  "column_break_24",
+  "bu_focal_points_duration"
  ],
  "fields": [
   {
@@ -102,7 +110,6 @@
    "label": "Email Reply"
   },
   {
-   "depends_on": "eval:doc.__islocal",
    "fieldname": "raised_by",
    "fieldtype": "Data",
    "label": "Raised By",
@@ -143,11 +150,47 @@
    "fieldname": "subject",
    "fieldtype": "Data",
    "label": "Subject"
+  },
+  {
+   "fieldname": "section_break_20",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "status_history",
+   "fieldtype": "Table",
+   "label": "Status History",
+   "options": "Email System Status History",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_22",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "call_center_team_duration",
+   "fieldtype": "Duration",
+   "label": "Call Center Team Duration",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_24",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "bu_focal_points_duration",
+   "fieldtype": "Duration",
+   "label": "BU Focal Points Duration",
+   "read_only": 1
+  },
+  {
+   "fieldname": "send_email",
+   "fieldtype": "Button",
+   "label": "Send Email"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-09-10 13:32:33.359588",
+ "modified": "2021-09-13 12:54:17.642652",
  "modified_by": "Administrator",
  "module": "Pcfc",
  "name": "PCFC Email System",
@@ -166,7 +209,9 @@
    "write": 1
   }
  ],
+ "sender_field": "raised_by",
  "sort_field": "modified",
  "sort_order": "DESC",
+ "subject_field": "subject",
  "track_changes": 1
 }
