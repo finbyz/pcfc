@@ -96,6 +96,9 @@ doc_events = {
 	"Trakhees":{
 		"validate":"pcfc.pcfc.doc_events.trakhees.validate"
 	},
+	"Communication":{
+		"before_validate":"pcfc.api.comm_before_validate"
+	},
 	# ('Dubai Maritime City Authority','Dubai Ports Authority','EHS','Inquiry and Feedback','Marine Agency','PCFC Investment','PCFC Security','Trakhees'):{
 	# 	"validate":"pcfc.api.validate"
 	# }
@@ -140,7 +143,17 @@ doc_events = {
 # override_whitelisted_methods = {
 # 	"frappe.desk.doctype.event.event.get_events": "pcfc.event.get_events"
 # }
-#
+
+# to set To and CC field from email
+from frappe.email.doctype.email_account.email_account import EmailAccount
+from pcfc.api import create_new_parent
+EmailAccount.create_new_parent = create_new_parent
+
+# when reply on email status should be new 
+from frappe.core.doctype.communication import communication
+from pcfc.api import update_parent_document_on_communication
+communication.update_parent_document_on_communication = update_parent_document_on_communication
+
 # each overriding function accepts a `data` argument;
 # generated from the base implementation of the doctype dashboard,
 # along with any modifications made in other Frappe apps

@@ -14,6 +14,9 @@
   "caller_name",
   "caller_phone_number",
   "email_address",
+  "customer_type",
+  "company_license_number",
+  "application_reference_number",
   "column_break_8",
   "contact_received_from",
   "contact_type",
@@ -66,6 +69,7 @@
    "reqd": 1
   },
   {
+   "default": "+971",
    "description": "Should start with 971",
    "fieldname": "caller_phone_number",
    "fieldtype": "Data",
@@ -124,12 +128,28 @@
    "hidden": 1,
    "label": "Email Id",
    "read_only": 1
+  },
+  {
+   "fieldname": "customer_type",
+   "fieldtype": "Select",
+   "label": "Customer Type",
+   "options": "Company\nIndividual"
+  },
+  {
+   "fieldname": "application_reference_number",
+   "fieldtype": "Data",
+   "label": "Application Reference Number"
+  },
+  {
+   "fieldname": "company_license_number",
+   "fieldtype": "Data",
+   "label": "Company License Number"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2021-07-12 15:52:28.997756",
+ "modified": "2021-09-17 08:36:39.683506",
  "modified_by": "Administrator",
  "module": "Pcfc",
  "name": "Inquiry and Feedback",

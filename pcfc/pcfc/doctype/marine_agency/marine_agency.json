@@ -15,6 +15,9 @@
   "caller_name",
   "caller_phone_number",
   "email_address",
+  "customer_type",
+  "company_license_number",
+  "application_reference_number",
   "column_break_11",
   "case_status",
   "query_type",
@@ -148,12 +151,28 @@
    "hidden": 1,
    "label": "Email Id",
    "read_only": 1
+  },
+  {
+   "fieldname": "company_license_number",
+   "fieldtype": "Data",
+   "label": "Company License Number"
+  },
+  {
+   "fieldname": "customer_type",
+   "fieldtype": "Select",
+   "label": "Customer Type",
+   "options": "Company\nIndividual"
+  },
+  {
+   "fieldname": "application_reference_number",
+   "fieldtype": "Data",
+   "label": "Application Reference Number"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2021-07-12 15:51:52.073662",
+ "modified": "2021-09-17 08:38:16.403418",
  "modified_by": "Administrator",
  "module": "Pcfc",
  "name": "Marine Agency",

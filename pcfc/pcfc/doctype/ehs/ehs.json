@@ -15,6 +15,9 @@
   "caller_name",
   "caller_phone_number",
   "email_address",
+  "company_type",
+  "company_license_number",
+  "application_reference_number",
   "column_break_8",
   "query_type",
   "department",
@@ -63,6 +66,7 @@
    "reqd": 1
   },
   {
+   "default": "+971",
    "description": "Should start with 971",
    "fieldname": "caller_phone_number",
    "fieldtype": "Data",
@@ -85,16 +89,20 @@
    "fieldtype": "Column Break"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "query_type",
    "fieldtype": "Select",
    "label": "Query Type",
-   "options": "Service Related\nGeneral Inquiry\nNon-Interactive Call\nIncorrect Department"
+   "options": "Service Related\nGeneral Inquiry\nNon-Interactive Call\nIncorrect Department",
+   "reqd": 1
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "department",
    "fieldtype": "Select",
    "label": "Department ",
-   "options": "Public Health & Safety\nIndustrial Operations\nPorts & Maritime\nEnvironment Section\nLab Related\nTrakhees Lab Related"
+   "options": "Public Health & Safety\nIndustrial Operations\nPorts & Maritime\nEnvironment Section\nLab Related\nTrakhees Lab Related",
+   "reqd": 1
   },
   {
    "allow_on_submit": 1,
@@ -157,12 +165,28 @@
    "hidden": 1,
    "label": "Email Id",
    "read_only": 1
+  },
+  {
+   "fieldname": "company_license_number",
+   "fieldtype": "Data",
+   "label": "Company License Number"
+  },
+  {
+   "fieldname": "company_type",
+   "fieldtype": "Select",
+   "label": "Company Type",
+   "options": "Company\nIndividual"
+  },
+  {
+   "fieldname": "application_reference_number",
+   "fieldtype": "Data",
+   "label": "Application Reference Number"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2021-07-12 15:53:03.328393",
+ "modified": "2022-03-03 10:57:53.723985",
  "modified_by": "Administrator",
  "module": "Pcfc",
  "name": "EHS",

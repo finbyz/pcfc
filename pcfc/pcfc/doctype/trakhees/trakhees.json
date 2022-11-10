@@ -15,6 +15,9 @@
   "caller_name",
   "caller_phone_number",
   "email_address",
+  "customer_type",
+  "company_license_number",
+  "application_reference_number",
   "column_break_8",
   "service_type",
   "sub_service_type",
@@ -71,6 +74,7 @@
    "reqd": 1
   },
   {
+   "default": "+971",
    "description": "Should start with 971",
    "fieldname": "caller_phone_number",
    "fieldtype": "Data",
@@ -91,17 +95,21 @@
    "fieldtype": "Column Break"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "service_type",
    "fieldtype": "Link",
    "label": "Service Type",
-   "options": "Trakhees Service Type"
+   "options": "Trakhees Service Type",
+   "reqd": 1
   },
   {
+   "allow_on_submit": 1,
    "depends_on": "eval:doc.service_type!=\"Others- Please Specify\"",
    "fieldname": "sub_service_type",
    "fieldtype": "Link",
    "label": "Sub Service Type",
-   "options": "Trakhees Sub Service Type"
+   "options": "Trakhees Sub Service Type",
+   "reqd": 1
   },
   {
    "allow_on_submit": 1,
@@ -164,12 +172,28 @@
    "hidden": 1,
    "label": "Email Id",
    "read_only": 1
+  },
+  {
+   "fieldname": "customer_type",
+   "fieldtype": "Select",
+   "label": "Customer Type",
+   "options": "Company\nIndividual"
+  },
+  {
+   "fieldname": "company_license_number",
+   "fieldtype": "Data",
+   "label": "Company License Number"
+  },
+  {
+   "fieldname": "application_reference_number",
+   "fieldtype": "Data",
+   "label": "Application Reference Number"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2021-07-12 12:33:11.569321",
+ "modified": "2022-03-03 10:58:22.443372",
  "modified_by": "Administrator",
  "module": "Pcfc",
  "name": "Trakhees",

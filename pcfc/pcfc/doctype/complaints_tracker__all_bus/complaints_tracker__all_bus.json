@@ -1,0 +1,322 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2022-02-11 10:16:31.381469",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "date",
+  "agent_name",
+  "caller_name",
+  "channel_of_receiving_the_complaint",
+  "complaint_month",
+  "complaint_date",
+  "complaint_delivered_to_crm",
+  "recurring",
+  "customer_type",
+  "customer_name_company_name_details",
+  "classification_of_complaint",
+  "complaint_description",
+  "complaint_nature",
+  "validity_of_the_complaint",
+  "complaint_pertaining_to_pcfc_bus",
+  "complaint_pertaining_to_dept",
+  "assigned_section",
+  "column_break_8",
+  "data_21",
+  "date_of_response_acknowledgement_to_department_2_working_day",
+  "date_of_response_acknowledgement_from_department_3_working_days",
+  "root_cause_analysis",
+  "corrective_or_preventive_action_taken",
+  "date_of_resolution_mail_forwarded_to_crm_10_working_days",
+  "date_of_resolution_mail_forwarded_to_customer_1_working_days",
+  "date_of_closure_response_received_from_customer",
+  "feedback_received",
+  "satisfied",
+  "survey_score",
+  "remarks",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "Email -"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date"
+  },
+  {
+   "fieldname": "agent_name",
+   "fieldtype": "Link",
+   "label": "Agent Name",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "caller_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Complaint Tracking No",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Complaints Tracker  All BUs",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Complaints Tracker  All BUs",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "channel_of_receiving_the_complaint",
+   "fieldtype": "Select",
+   "label": "Channel of Receiving the Complaint",
+   "options": "\nDrop Box\nEmail\nFeedback Form\nPersonal Visit\nSocial Media\nWebsite / Mobile Site\nPhone Call\nOthers",
+   "reqd": 1
+  },
+  {
+   "fieldname": "complaint_month",
+   "fieldtype": "Select",
+   "label": "Complaint Month",
+   "options": "\nJanuary\nFebruary\nMarch\nApril\nMay\nJune\nJuly\nAugust\nSeptember\nOctober\nNovember\nDecember",
+   "reqd": 1
+  },
+  {
+   "fieldname": "complaint_date",
+   "fieldtype": "Date",
+   "label": "Complaint Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "complaint_delivered_to_crm",
+   "fieldtype": "Date",
+   "label": "Complaint delivered to CRM",
+   "reqd": 1
+  },
+  {
+   "fieldname": "recurring",
+   "fieldtype": "Select",
+   "label": "Recurring",
+   "options": "\nNo\nYes",
+   "reqd": 1
+  },
+  {
+   "fieldname": "customer_type",
+   "fieldtype": "Select",
+   "label": "Customer Type",
+   "options": "\nInternal\nExternal",
+   "reqd": 1
+  },
+  {
+   "fieldname": "customer_name_company_name_details",
+   "fieldtype": "Data",
+   "label": "Customer Name Company Name Details",
+   "reqd": 1
+  },
+  {
+   "fieldname": "classification_of_complaint",
+   "fieldtype": "Select",
+   "label": "Classification of Complaint",
+   "options": "\nChemical Dust\nDamaging the neighboring facilities\nDuplicated in Trade Name\nFalling of debris and construction materials\nFine Against The Facility\nIllegal practices in the construction site\nImproper Building Execution\nNoise during weekends and early/late hours and during the construction activities\nUnfinished building facilities\nUnsafety practices in the construction site",
+   "reqd": 1
+  },
+  {
+   "fieldname": "complaint_description",
+   "fieldtype": "Small Text",
+   "label": "Complaint Description",
+   "reqd": 1
+  },
+  {
+   "fieldname": "complaint_nature",
+   "fieldtype": "Select",
+   "label": "Complaint Nature",
+   "options": "\nFacility\nService\nFacility & Service",
+   "reqd": 1
+  },
+  {
+   "fieldname": "validity_of_the_complaint",
+   "fieldtype": "Select",
+   "label": "Validity of the Complaint",
+   "options": "\nValid\nInvalid",
+   "reqd": 1
+  },
+  {
+   "fieldname": "complaint_pertaining_to_pcfc_bus",
+   "fieldtype": "Select",
+   "label": "Complaint pertaining to PCFC Bus",
+   "options": "\nDepartment of Planning and Development - TRK\nDubai Maritime City Authority - DMCA\nDubai Ports Authority - DPA\nMarine Agency - MA\nPCFC Investment - INV\nPCFC Security - SEC\nPCFC - CSC - EHS",
+   "reqd": 1
+  },
+  {
+   "fieldname": "complaint_pertaining_to_dept",
+   "fieldtype": "Select",
+   "label": "Complaint pertaining to Dept.",
+   "options": "\nLicensing Division\nCivil Engineering Division\nEnvironment Health and Safety\nCSC - Finance",
+   "reqd": 1
+  },
+  {
+   "fieldname": "assigned_section",
+   "fieldtype": "Select",
+   "label": "Assigned Section",
+   "options": "\nAccreditation\nConstruction Safety\nOvercrowding\nEnvironment\nFood Control\nFZ Industrial Operations\nGovernment Service\nInspection & Compliance\nLaboratory\nLicensing\nModification\nPermit\nFacility Permit\nPlanning\nPorts and Maritime\nPublic Health and Safety\nDeposit Refund\nSustainability\nHelpdesk\nOvercrowding",
+   "reqd": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "data_21",
+   "fieldtype": "Date",
+   "label": "Date of response acknowledgement to customer 2 working day",
+   "reqd": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "date_of_response_acknowledgement_to_department_2_working_day",
+   "fieldtype": "Date",
+   "label": "Date of response acknowledgement to Department 2 working day",
+   "reqd": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "date_of_response_acknowledgement_from_department_3_working_days",
+   "fieldtype": "Date",
+   "label": "Date of response acknowledgement from Department 3 working days",
+   "reqd": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "root_cause_analysis",
+   "fieldtype": "Small Text",
+   "label": "Root Cause Analysis",
+   "reqd": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "corrective_or_preventive_action_taken",
+   "fieldtype": "Small Text",
+   "label": "Corrective or Preventive Action Taken",
+   "reqd": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "date_of_resolution_mail_forwarded_to_crm_10_working_days",
+   "fieldtype": "Date",
+   "label": "Date of resolution mail forwarded to CRM 10 working days",
+   "reqd": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "date_of_resolution_mail_forwarded_to_customer_1_working_days",
+   "fieldtype": "Date",
+   "label": "Date of resolution mail forwarded to customer 1 working days",
+   "reqd": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "date_of_closure_response_received_from_customer",
+   "fieldtype": "Date",
+   "label": "Date of Closure Response Received from customer "
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "feedback_received",
+   "fieldtype": "Select",
+   "label": "Feedback Received",
+   "options": "\nYes\nNo",
+   "reqd": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "satisfied",
+   "fieldtype": "Select",
+   "label": "Satisfied",
+   "options": "\nYes\nNo",
+   "reqd": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "survey_score",
+   "fieldtype": "Data",
+   "label": "Survey Score",
+   "reqd": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2022-02-11 10:46:50.801436",
+ "modified_by": "Administrator",
+ "module": "Pcfc",
+ "name": "Complaints Tracker  All BUs",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Administrator",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Call Center Agent",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "caller_name",
+ "track_changes": 1
+}

@@ -1,0 +1,248 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2021-11-13 09:49:53.548680",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "date",
+  "agent_name",
+  "caller_name",
+  "email_subject_line",
+  "data_7",
+  "email_action_time",
+  "data_8",
+  "reason_for_contact",
+  "inquiry_category",
+  "sub_business_unit",
+  "column_break_8",
+  "status",
+  "follow_up_date",
+  "date_of_follow_up_email_to_focal_points_b4_kpi",
+  "date_of_response_fp",
+  "time_of_response_fp",
+  "follow_up_number",
+  "resolution_date",
+  "time_of_resolution",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "Email -"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date"
+  },
+  {
+   "fieldname": "agent_name",
+   "fieldtype": "Link",
+   "label": "Agent Name",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "caller_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Sender Email",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Email Tracker All BUs",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Email Tracker All BUs",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "data_7",
+   "fieldtype": "Time",
+   "label": "Email Received Time",
+   "reqd": 1
+  },
+  {
+   "fieldname": "email_subject_line",
+   "fieldtype": "Data",
+   "label": "Email Subject Line",
+   "reqd": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "email_action_time",
+   "fieldtype": "Time",
+   "label": "Email Action Time",
+   "reqd": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "data_8",
+   "fieldtype": "Select",
+   "label": "Business Unit",
+   "options": "\nDMCA\nTrakhees\nTrakhees - CED\nTrakhees - LD\nEHS\nPCFC Security\nMarine Agency\nPCFC Investments\nQE2\nDubai Ports Authority",
+   "reqd": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "sub_business_unit",
+   "fieldtype": "Select",
+   "label": "Forwarded To",
+   "options": "\nEmail sent to CED team\nEmail Sent to CH Team\nEmail Sent to Customer\nEmail sent to DMCA - MTM\nEmail sent to DMCA - Inspectors\nEmail sent to DMCA - Licensing\nEmail sent to DMCA - CBD\nEmail sent to DMCA - Operations\nEmail sent to DMCA - RTS\nEmail sent to EHS\nEmail sent to Finance department\nEmail sent to HR\nEmail sent to LD Team\nEmail sent to Marine Agency\nEmail sent to PCFC Security team\nEmail sent to Trakhees Compliance\nPromo / Spam Email\nWe were CCed",
+   "reqd": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nResolved\nAwaiting Response from FP",
+   "reqd": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "follow_up_number",
+   "fieldtype": "Select",
+   "label": "Follow up Number",
+   "options": "\nNo Follow Needed\nFollow up 1\nFollow up 2\nFollow up 3\nFollow up 4\nFollow up 5\nFollow up 6\nFollow up 7"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "date_of_response_fp",
+   "fieldtype": "Date",
+   "label": "Date of Response FP"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "time_of_response_fp",
+   "fieldtype": "Time",
+   "label": "Time of Response FP"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "resolution_date",
+   "fieldtype": "Date",
+   "label": "Resolution Date"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "time_of_resolution",
+   "fieldtype": "Time",
+   "label": "Time Of Resolution"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "follow_up_date",
+   "fieldtype": "Date",
+   "label": "Planned Follow Up Date",
+   "reqd": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "reason_for_contact",
+   "fieldtype": "Select",
+   "label": "Reason for Contact",
+   "options": "\nNeed More Info - Query Not Clear\nJob Inquiry / CV Submission\nNOC Requests\nSupportive documentation\nTrakhees Fines\nDMCA Fines\nRe-schedule Inspection\nCompany account registration\nUnable to access Trakhees portal\nUnable to access accreditation portal\nIT Technical issues in portal\nStatus of the application\nNeed more info for their submissions\nFollow ups\nMarine crew licenses\nMarine craft Registration\nMarine craft cancellation\nRenew DMCA Trade License\nPre-qualification\nOFC new/renewal/amendment\nTrade license new/renewal/amendment\nEHS permit new/renewal\nUnable to access DMCA portal\nVisa New/renewal/cancellation\nAccreditation courses\nCopy of documents\nCED submission technical query\nMeeting request\nFinance issues\nRequest to send them gate pass\nEstablishment card new/renewal\nCommunity compliance\nPromo\nFeedback email\nUpdate Lease - LD\nUpdate Profile/license details\nEHS permit new/renewal to Permit new/renewal\nUpdate UBO\nPRO Card related\nOffice details enquiries\nSite plan/affection plan\nReturn gate pass\nUnable to access Tasreeh portal\nApply For Pass\nEHS lab\nComplaint\nGeneral\nOther",
+   "reqd": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "inquiry_category",
+   "fieldtype": "Select",
+   "label": "Inquiry Category",
+   "options": "\nGeneral Inquiry\nTechnical Inquiry\nTechnical Error",
+   "reqd": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "date_of_follow_up_email_to_focal_points_b4_kpi",
+   "fieldtype": "Date",
+   "label": "Date of Follow Up Email to Focal Points B4 KPI"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2022-10-15 08:41:27.842630",
+ "modified_by": "Administrator",
+ "module": "Pcfc",
+ "name": "Email Tracker All BUs",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Administrator",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Call Center Agent",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Call Center Team Leader",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "caller_name",
+ "track_changes": 1
+}

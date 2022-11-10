@@ -13,6 +13,7 @@
   "query_type",
   "column_break_5",
   "status",
+  "sla_status",
   "opening_date",
   "opening_time",
   "resolution_date",
@@ -26,25 +27,27 @@
   "email_template",
   "subject",
   "agent_response_area",
+  "select_attachments",
   "send_email",
   "section_break_20",
   "status_history",
   "section_break_22",
   "call_center_team_duration",
+  "bu_focal_points_duration",
   "column_break_24",
-  "bu_focal_points_duration"
+  "new_duration",
+  "total_duration"
  ],
  "fields": [
   {
    "fieldname": "naming_series",
    "fieldtype": "Select",
    "label": "Naming Series",
-   "options": "PES-"
+   "options": "PCFC-.YY.MM.DD.###"
   },
   {
    "fieldname": "agent_name",
    "fieldtype": "Link",
-   "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Agent Name",
    "options": "User"
@@ -52,7 +55,6 @@
   {
    "fieldname": "business_unit",
    "fieldtype": "Select",
-   "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Business Unit",
    "options": "\nDMCA\nTrakhees\nPCFC Security\nEHS\nMarine Agency"
@@ -60,7 +62,6 @@
   {
    "fieldname": "query_type",
    "fieldtype": "Link",
-   "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Query Type",
    "options": "Query Type"
@@ -88,6 +89,7 @@
   {
    "fieldname": "opening_time",
    "fieldtype": "Time",
+   "in_list_view": 1,
    "label": "Opening Time",
    "read_only": 1
   },
@@ -112,7 +114,7 @@
   {
    "fieldname": "raised_by",
    "fieldtype": "Data",
-   "label": "Raised By",
+   "label": "From",
    "options": "Email"
   },
   {
@@ -149,7 +151,9 @@
   {
    "fieldname": "subject",
    "fieldtype": "Data",
-   "label": "Subject"
+   "in_list_view": 1,
+   "label": "Subject",
+   "reqd": 1
   },
   {
    "fieldname": "section_break_20",
@@ -186,11 +190,38 @@
    "fieldname": "send_email",
    "fieldtype": "Button",
    "label": "Send Email"
+  },
+  {
+   "default": "Within SLA",
+   "fieldname": "sla_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "SLA Status",
+   "options": "\nWithin SLA\nOverdue Call Center Team\nOverdue BU Focal Points",
+   "read_only": 1
+  },
+  {
+   "fieldname": "new_duration",
+   "fieldtype": "Duration",
+   "label": "New Duration",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_duration",
+   "fieldtype": "Duration",
+   "label": "Total Duration",
+   "read_only": 1
+  },
+  {
+   "fieldname": "select_attachments",
+   "fieldtype": "HTML",
+   "label": "Select Attachments"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-09-13 12:54:17.642652",
+ "modified": "2021-09-21 09:04:37.622218",
  "modified_by": "Administrator",
  "module": "Pcfc",
  "name": "PCFC Email System",

@@ -15,6 +15,9 @@
   "caller_name",
   "caller_phone_number",
   "email_address",
+  "customer_type",
+  "company_license_number",
+  "application_reference_number",
   "column_break_8",
   "department",
   "case_status",
@@ -61,6 +64,7 @@
    "reqd": 1
   },
   {
+   "default": "+971",
    "description": "Should start with 971",
    "fieldname": "caller_phone_number",
    "fieldtype": "Data",
@@ -136,12 +140,28 @@
    "hidden": 1,
    "label": "Email Id",
    "read_only": 1
+  },
+  {
+   "fieldname": "application_reference_number",
+   "fieldtype": "Data",
+   "label": "Application Reference Number"
+  },
+  {
+   "fieldname": "company_license_number",
+   "fieldtype": "Data",
+   "label": "Company License Number"
+  },
+  {
+   "fieldname": "customer_type",
+   "fieldtype": "Select",
+   "label": "Customer Type",
+   "options": "Company\nIndividual"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2021-07-12 15:51:28.716758",
+ "modified": "2021-09-17 08:40:20.531833",
  "modified_by": "Administrator",
  "module": "Pcfc",
  "name": "PCFC Investment",

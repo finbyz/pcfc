@@ -15,6 +15,9 @@
   "caller_name",
   "caller_phone_number",
   "email_address",
+  "customer_type",
+  "company_license_number",
+  "application_reference_number",
   "column_break_8",
   "query_type",
   "case_status",
@@ -56,6 +59,7 @@
    "reqd": 1
   },
   {
+   "default": "+971",
    "description": "Should start with 971",
    "fieldname": "caller_phone_number",
    "fieldtype": "Data",
@@ -76,10 +80,12 @@
    "fieldtype": "Column Break"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "query_type",
    "fieldtype": "Select",
    "label": "Query Type",
-   "options": "One Day Pass Related\nWeekly Pass Related\nMonthly Pass Related\n3 Months Pass Related\n6 Months Pass Related\nYearly Pass Related\nGoods Entry Pass\nTools & Equipment Pass\nGeneral Inquiry\nNon-Interactive Call\nIncorrect Department"
+   "options": "\nOne Day Pass Related\nWeekly Pass Related\nMonthly Pass Related\n3 Months Pass Related\n6 Months Pass Related\nYearly Pass Related\nGoods Entry Pass\nTools & Equipment Pass\nGeneral Inquiry\nNon-Interactive Call\nIncorrect Department",
+   "reqd": 1
   },
   {
    "allow_on_submit": 1,
@@ -147,12 +153,28 @@
    "hidden": 1,
    "label": "Email Id",
    "read_only": 1
+  },
+  {
+   "fieldname": "customer_type",
+   "fieldtype": "Select",
+   "label": "Customer Type",
+   "options": "Company\nIndividual"
+  },
+  {
+   "fieldname": "company_license_number",
+   "fieldtype": "Data",
+   "label": "Company License Number"
+  },
+  {
+   "fieldname": "application_reference_number",
+   "fieldtype": "Data",
+   "label": "Application Reference Number"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2021-07-12 15:51:07.167683",
+ "modified": "2022-03-05 21:26:01.075089",
  "modified_by": "Administrator",
  "module": "Pcfc",
  "name": "PCFC Security",
